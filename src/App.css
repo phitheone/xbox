@@ -1,38 +1,314 @@
+* {
+  box-sizing: border-box;
+}
+
+@import url("https://fonts.googleapis.com/css2?family=Arimo&display=swap");
+
+/* font-family: 'Arimo', sans-serif; */
+
+body {
+  font-family: "Arimo", sans-serif;
+  background-color: rgb(255, 255, 255);
+  color: white;
+  --green: #107c10;
+  --gray: #666666;
+  --darkgray: #242424;
+  --white: #ffffff;
+  --black: #000000;
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
+a {
+  text-decoration: none;
+  color: var(--white);
+}
+
 .App {
-  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+
+  /* border: solid purple 1px; */
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.Head {
+  background-color: var(--white);
+  color: var(--gray);
+  width: 100%;
+
+  /* border: solid red 1px; */
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.Head img {
+  height: 40px;
+  margin: 5px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.Hero {
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  background-image: url("./images/bg_hero.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 100% auto;
+  height: 90vh;
+  width: 100%;
+
+  /* border: solid red 1px; */
+}
+
+.Hero img {
+  margin-top: 150px;
+}
+
+.Hero h1 {
+  font-size: 80px;
+  text-shadow: 0 0 15px var(--black), 0 0 20px var(--black);
+}
+
+.Hero span {
+  color: var(--green);
+  text-shadow: 0 0 5px var(--black), 0 0 10px var(--black);
+}
+
+.Contract {
+  height: 100px;
+  background-color: var(--green);
+  width: 40%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  line-height: 40px;
+  position: relative;
+}
+
+.CTitle {
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  width: 100%;
+  padding: 0;
+  margin-left: 20px;
+
+  /* border: solid purple 1px; */
+}
+
+.CTitle h2 {
+  margin: 0;
+}
+
+.Copier {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  height: 50%;
+  margin-left: 20px;
+
+  /* border: solid red 1px; */
+}
+
+.Copier h2 {
+  margin: 0;
+}
+
+.Copier img {
+  height: 30px;
+  width: 30px;
+  cursor: pointer;
+  position: absolute;
+  right: 10px;
+  bottom: 15px;
+  transition: 0.5s;
+
+  /* border: solid yellow 1px; */
+}
+
+.Copier img:hover {
+  scale: 1.1;
+}
+
+.Links1 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  background-color: var(--white);
+  padding: 20px;
+}
+
+.Icons {
+  display: flex;
+  flex-direction: row;
+  width: 700px;
+  height: 100px;
+  justify-content: space-between;
+  align-items: center;
+
+  /* border: solid red 1px; */
+}
+
+.Icon {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  border-bottom: solid rgba(0, 0, 0, 0) 4px;
+  transition: 0.5s;
+}
+
+.Icon img {
+  height: 50px;
+}
+
+.Icon p {
+  font-size: 18px;
+  margin-bottom: 3px;
+  color: var(--green);
+  font-weight: bolder;
+}
+
+.Icon:hover {
+  border-bottom: solid var(--green) 4px;
+}
+
+.Mosaic {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+
+  /* border: solid red 1px; */
+}
+
+.Tokenomics {
+  display: flex;
+  margin: 10px;
+  flex: 1;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--green);
+  background-image: url("./images/toke_bg.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 100% auto;
+}
+
+.TokeButtons {
+  display: flex;
+  height: 600px;
+  width: 600px;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  position: relative;
+
+  /* border: solid red 1px; */
 }
 
-.App-link {
-  color: #61dafb;
+.TokeButtons img {
+  height: 220px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.tup {
+  position: absolute;
+  top: 0;
+}
+
+.tleft {
+  position: absolute;
+  left: 0;
+}
+
+.tright {
+  position: absolute;
+  right: 0;
+}
+
+.tdown {
+  position: absolute;
+  bottom: 0;
+}
+
+.CRight {
+  display: flex;
+  flex-direction: column;
+  margin: 10px;
+  flex: 1;
+}
+
+.Description {
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 10px;
+}
+
+.DLeft {
+  background-color: var(--green);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex: 1;
+  margin: 0;
+}
+
+.DLeft img {
+  height: 70%;
+}
+
+.DRight {
+  background-image: url("./images/bg_content.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  background-color: var(--gray);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex: 1;
+  margin: 0;
+}
+
+.DRight img {
+  height: 40%;
+}
+
+.Photo {
+  margin-top: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.Photo img {
+  width: 100%;
+}
+
+.Footer {
+  height: 30vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--darkgray);
+  width: 100%;
+  color: var(--green);
+
+  /* border: solid red 1px; */
+}
+
+.Socials {
+  display: flex;
+  flex-direction: row;
+  width: 180px;
+  align-items: center;
+  justify-content: space-between;
 }
